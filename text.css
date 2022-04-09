@@ -2,48 +2,130 @@
     background-image: url("background.jpg");
     background-repeat:round no-repeat;
 }*/
+
+/*-----------------------------------------*/
+
+*{user-select: none;}
+
+/*-----------------------------------------*/
+
 body{
     background-color: yellow;
 }
+
+/*-----------------------------------------*/
+
+#background{
+    text-align: center;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    background-image: url("./background.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#background h1{
+    color: aqua;
+    font-size: 100px;
+}
+
+/*-----------------------------------------*/
+
+div#list{
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+ul#list{
+    background-color: rgb(0, 0, 0);
+    margin: 0%;
+    padding: 0%;
+    list-style-type: none;
+    overflow: hidden;
+}
+#list li a{
+    float: left;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    color: white;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 30px;
+
+    transition: background-color 0.45s;
+}
+
+#list a#thispage{
+    background-color: darkgreen;
+}
+#list a#thispage:hover{
+    background-color: rgb(9, 65, 24)
+}
+
+#list a:hover:not(#thispage){
+    background-color: rgb(70, 70, 70);
+}
+
+
+/*-----------------------------------------*/
+
 div.list1{
-    display: block;
     margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
     background-color: rgb(26, 26, 26);
     border-radius: 10px;
     border: 5px solid white;
+    text-align: left;
+
+    transition:width 1s,margin-left 0.5s,margin-right 0.5s;
 }
-h2{
+div.list1:hover{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.list1 h2{
     color: white;
     text-align: center;
 }
-img{
+
+.list1 img{
     float: right;
     position :relative;
     bottom: 50px;
     height: 50px;
     width: 50px;
 
-    transition: opacity 0.25s,box-shadow 0.5s,background-color 0.5s;
+    transition: opacity 0.25s,box-shadow 0.5s,background-color 0.25s;
     transition-delay: 0.25s;
     transition-timing-function: ease;
 
     border-radius: 40px;
 }
-img.black{
+.list1 img.black{
     filter: brightness(200);
 }
-img:hover{
+.list1 img:hover{
     background-color: rgba(10, 10, 10, 0.2);
     opacity: 75%;
     box-shadow: 2px 2px 8px 1px rgb(20, 20, 20);
 }
-p{
+
+.list1 p{
     position: relative;
-    width: calc(100% - 50px);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: calc(45% - 50px);
     text-align: left;
     color: aqua;
     font-size: 20px;
     padding-left: 10px;
 }
+
+/*-----------------------------------------*/
