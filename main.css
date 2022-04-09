@@ -129,4 +129,11 @@ div.list1:hover{
     padding-left: 10px;
 }
 
+.list1 p a{
+    color: aqua;
+}
+.list1 p a:visited{
+    color: rgb(0, 172, 172);
+}
+
 /*-----------------------------------------*/
