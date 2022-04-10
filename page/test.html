@@ -35,11 +35,29 @@
             </a>
         </div>
     </div>
-    <div class="list1">
-        <div style="display: block;height: 500px;width: 500px;animation-duration: 5s;animation-name:hi;position: relative;animation-delay: 10s;">
-
+    <div class="list1" style="max-height: 150px;">
+        <div style="margin-top: 50px;display: block;height: 100px;width: 100%;animation-duration: 5s;animation-name:hi;position: relative;animation-delay: 5s; animation-iteration-count: infinite;animation-direction: alternate;animation-timing-function: linear;">
         </div>
+        <div style="visibility: hidden;height: 150px;width: 10px;">
+        </div>
+    </div>
+    <div class="list1" style="max-height: 150px;" id="Test">
+        <img style="margin-top: 50px; display: block;height: 200px;width: 100%;animation-duration: 5s;animation-name:hi;position: relative;animation-delay: 0s; animation-iteration-count: infinite;animation-direction:alternate-reverse;animation-timing-function: linear;float: left;" src="../3$.png">
+        <div style="visibility: hidden;height: 300px;width: 300px;">
+        </div>
+    </div>
+    <div class="buttons list1">
+        <button onclick="Button1()" style="display: inline-block;">unvisible</button>
+        <button onclick="Button2()" style="display: inline-block;">visible</button>
     </div>
 
 </body>
 </html>
+<script>
+    function Button1(){
+        document.getElementById("Test").style.visibility = "hidden";
+    }
+    function Button2(){
+        document.getElementById("Test").style.visibility = "visible";
+    }
+</script>
