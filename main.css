@@ -10,7 +10,9 @@
 /*-----------------------------------------*/
 
 body{
-    background-color: yellow;
+    background-color: rgba(96, 113, 133, 0.5);
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-align:center;
 }
 
 /*-----------------------------------------*/
@@ -22,9 +24,12 @@ body{
     background-image: url("./background.png");
     background-repeat: no-repeat;
     background-position: center;
+    display: block;
+    box-shadow: inset 1px 1px 100px 1px rgba(255, 255,255,1);
+    z-index: 2;
 }
 #background h1{
-    color: aqua;
+    color: rgb(0, 145, 145); 
     font-size: 100px;
 }
 
@@ -84,8 +89,8 @@ div.list1{
     transition:width 1s,margin-left 0.5s,margin-right 0.5s;
 }
 div.list1:hover{
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 .list1 h2{
@@ -115,18 +120,22 @@ div.list1:hover{
 
 .list1 p{
     position: relative;
-    width: calc(45% - 50px);
+    width: calc(65% - 50px);
     text-align: left;
     color: aqua;
     font-size: 20px;
     padding-left: 10px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
     text-overflow: ellipsis;
-    overflow: hidden;
-    height: 50px;
+    overflow:hidden;
+    height: 25px;
     transition: height 0s;
 }
 
 div.list1:hover p{
+    text-overflow: clip;
+    word-wrap: break-word;
     height: auto;
 }
 
@@ -143,35 +152,35 @@ div.list1:hover p{
     0%{
         max-height: 10px;
         max-width: 10px;
-        background-color: aqua;
+        background-color: rgb(255, 0, 0);
         left: 0;
         transform: rotateZ(360deg);
     }
     25%{
         max-height: 50px;
         max-width: 50px;
-        background-color: rgba(0, 255, 255, 0.75);
+        background-color: rgba(47, 0, 255, 0.75);
         left: 25%;
         transform: rotateZ(1080deg);
     }
     50%{
         max-height: 100px;
         max-width: 100px;
-        background-color: rgba(0, 255, 255, 0.5);
+        background-color: rgba(0, 255, 200, 0.5);
         left: 50%;
         transform: rotateZ(3160deg);
     }
     75%{
         max-height: 50px;
         max-width: 50px;
-        background-color: rgba(0, 255, 255, 0.75);
+        background-color: rgba(115, 255, 0, 0.75);
         left: 75%;
         transform: rotateZ(1080deg);
     }
     100%{
         max-height: 10px;
         max-width: 10px;
-        background-color: aqua;
+        background-color: rgb(255, 0, 0);
         left: calc(100% - 10px);
         transform: rotateZ(360deg);
     }
