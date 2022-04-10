@@ -28,10 +28,7 @@ body{
     font-size: 100px;
 }
 
-/*-----------------------------------------*/
-
 div#list{
-    margin-top: 10px;
     position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
@@ -83,7 +80,6 @@ div.list1{
     border-radius: 10px;
     border: 5px solid white;
     text-align: left;
-
     transition:width 1s,margin-left 0.5s,margin-right 0.5s;
 }
 div.list1:hover{
@@ -97,17 +93,15 @@ div.list1:hover{
 }
 
 .list1 img{
+    position: relative;
     float: right;
-    position :relative;
     bottom: 50px;
-    height: 50px;
+    height: auto;
     width: 50px;
-
+    border-radius: 40px;
     transition: opacity 0.25s,box-shadow 0.5s,background-color 0.25s;
     transition-delay: 0.25s;
     transition-timing-function: ease;
-
-    border-radius: 40px;
 }
 .list1 img.black{
     filter: brightness(200);
@@ -120,8 +114,6 @@ div.list1:hover{
 
 .list1 p{
     position: relative;
-    word-wrap: break-word;
-    overflow-wrap: break-word;
     width: calc(45% - 50px);
     text-align: left;
     color: aqua;
@@ -134,6 +126,42 @@ div.list1:hover{
 }
 .list1 p a:visited{
     color: rgb(0, 172, 172);
+}
+
+/*-----------------------------------------*/
+
+@keyframes hi{
+    0%{
+        max-height: 10px;
+        max-width: 10px;
+        background-color: aqua;
+        left: 0;
+    }
+    25%{
+        max-height: 50px;
+        max-width: 50px;
+        background-color: rgba(0, 255, 255, 0.75);
+        left: 50%;
+    }
+    50%{
+        max-height: 100px;
+        max-width: 100px;
+        background-color: rgba(0, 255, 255, 0.5);
+        left: 100%;
+    }
+    75%{
+        max-height: 50px;
+        max-width: 50px;
+        background-color: rgba(0, 255, 255, 0.75);
+        left: 50%;
+    }
+    100%{
+        max-height: 10px;
+        max-width: 10px;
+        background-color: aqua;
+        left: 0;
+    }
+
 }
 
 /*-----------------------------------------*/
