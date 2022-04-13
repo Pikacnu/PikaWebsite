@@ -129,7 +129,7 @@ div.list1:hover{
     padding-bottom: 0%;
     text-overflow: ellipsis;
     overflow:hidden;
-    height: 25px;
+    height: 100px;
     transition: height 0s;
 }
 
@@ -199,7 +199,7 @@ div.list1:hover p{
     border-bottom-right-radius: 15px;
 }
 .buttons button:first-child{
-    margin-left: 43%;
+    margin-left: calc(50% - 130px);
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
 }
