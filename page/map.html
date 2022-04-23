@@ -7,21 +7,13 @@
     <link rel="stylesheet" href="../main.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
-<body >
+<body onload="list('Map')">
     <h1></h1>
     <div id="background">
         <h1>Map</h1>
     </div>
 
-    <div id="list">
-        <ul id="list">
-            <li><a href="../index.html">主頁</a></li>
-            <li><a href="../page/dtp.html">資料包</a></li>
-            <li><a href="../page/map.html" id="thispage" >地圖</a></li>
-            <li><a href="../page/test.html" >測試</a></li>
-            <li><a href="../page/about.html" style="float: right;">關於</a></li>
-        </ul>
-    </div>
+    <iframe src="../list.html" frameborder="0" id="list"></iframe>
 
     <div style="margin-top: 50px;overflow:visible">
         <p style="font-size: 0px;">1</p>
@@ -35,6 +27,7 @@
             </a>
         </div>
     </div>
+    <script src="../main.js"></script>
 
 </body>
 </html>

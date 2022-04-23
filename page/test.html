@@ -7,21 +7,13 @@
     <link rel="stylesheet" href="../main.css">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
-<body >
+<body onload="list('Test')">
     <h1></h1>
     <div id="background">
         <h1>Test</h1>
     </div>
 
-    <div id="list">
-        <ul id="list">
-            <li><a href="../index.html">主頁</a></li>
-            <li><a href="../page/dtp.html">資料包</a></li>
-            <li><a href="../page/map.html" >地圖</a></li>
-            <li><a href="./test.html" id="thispage" >測試</a></li>
-            <li><a href="../page/about.html" style="float: right;">關於</a></li>
-        </ul>
-    </div>
+    <iframe src="../list.html" frameborder="0" id="list"></iframe>
 
     <div style="margin-top: 50px;overflow:visible">
         <p style="font-size: 0px;">1</p>
@@ -50,9 +42,11 @@
         <button onclick="Button1()" style="display: inline-block;">unvisible</button>
         <button onclick="Button2()" style="display: inline-block;">visible</button>
     </div>
-
+    <p>1</p>
+    <p>2</p>
+    <p id="hi">3</p>
 </body>
-</html>
+<script src="../main.js"></script>
 <script>
     function Button1(){
         document.getElementById("Test").style.visibility = "hidden";
@@ -61,3 +55,4 @@
         document.getElementById("Test").style.visibility = "visible";
     }
 </script>
+</html>
