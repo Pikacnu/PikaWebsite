@@ -54,7 +54,7 @@ div#list{
 }
 
 ul#list{
-    box-shadow: inset 0px 0px 100px 90px rgba(0, 0, 0, 0.829);
+    box-shadow: inset 0px 0px 100px 90px rgba(0, 0, 0, 0.8);
     margin: 0%;
     padding: 0%;
     list-style-type: none;
@@ -82,7 +82,7 @@ ul#list{
     background-color: rgb(1, 138, 1);
 }
 #list a#thispage:hover{
-    background-color: rgba(9, 65, 24,0.9)
+    background-color: rgba(15, 90, 35, 0.9)
 }
 
 #list a:hover:not(.thispage){
@@ -138,18 +138,21 @@ div.list1:hover{
     text-align: left;
     color: aqua;
     font-size: 20px;
-    padding-left: 10px;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
+    white-space: nowrap;
+    word-break: keep-all;
     text-overflow: ellipsis;
     overflow:hidden;
     height: 27px;
     transition: height 0s;
+    padding-left: 10px;
+    margin-bottom: 0%;
+    padding-bottom: 0%;
 }
 
 div.list1:hover p{
     text-overflow: clip;
     word-wrap: break-word;
+    white-space:normal;
     height: auto;
 }
 
