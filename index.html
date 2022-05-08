@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="0; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Breaking News!</title>
@@ -11,6 +10,12 @@
     <meta name="description" content="Neb released Subnaticraft V1.0.0">
     <meta property="og:image" content="https://pikacnu.github.io/Pikacnu/Neb.png">
 </head>
-<body>
+<body onload="refresh()">
+    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" id="click"></a>
+    <script>
+        function refresh(){
+            document.getElementById('click').click();
+        }
+    </script>
 </body>
 </html>
