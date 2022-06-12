@@ -34,7 +34,6 @@ body{
 }
 
 /*-----------------------------------------*/
-
 iframe#list{
     position: relative;
     overflow: hidden;
@@ -44,6 +43,17 @@ iframe#list{
     position: -webkit-sticky; /* Safari */
     position: sticky;
     z-index: 2;
+}
+@media screen and (max-width: 346px){
+    iframe#list{
+        height: 209px;
+        box-shadow: inset 0px 0px 10px 10000px rgba(0, 0, 0, 0.8);
+    }
+}
+@media screen and (min-width: 346px) and (max-width: 646px){
+    iframe#list{
+        height: 139.4px;
+    }
 }
 
 div#list{
@@ -60,6 +70,7 @@ ul#list{
     list-style-type: none;
     overflow: hidden;
 }
+
 
 #list li a{
     margin: 0%;
@@ -175,8 +186,8 @@ ul#list{
         text-align: left;
         color: aqua;
         font-size: 20px;
-        white-space: nowrap;
-        word-break: keep-all;
+        white-space: pre-wrap;
+        word-break: break-all;
         text-overflow: ellipsis;
         overflow:hidden;
         height: auto;
