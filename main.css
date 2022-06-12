@@ -29,7 +29,7 @@ body{
     z-index: 2;
 }
 #background h1{
-    color: rgb(0, 145, 145); 
+    color: rgb(182, 182, 182); 
     font-size: 100px;
 }
 
@@ -92,21 +92,6 @@ ul#list{
 
 /*-----------------------------------------*/
 
-div.list1{
-    margin-top: 50px;
-    margin-left: 20%;
-    margin-right: 20%;
-    background-color: rgb(26, 26, 26);
-    border-radius: 10px;
-    border: 5px solid white;
-    text-align: left;
-    transition:width 1s,margin-left 0.5s,margin-right 0.5s;
-}
-div.list1:hover{
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
 .list1 h2{
     color: white;
     text-align: center;
@@ -131,29 +116,75 @@ div.list1:hover{
     opacity: 75%;
     box-shadow: 2px 2px 8px 1px rgb(20, 20, 20);
 }
+@media (hover: hover) {
+    div.list1{
+        margin-top: 50px;
+        margin-left: 20%;
+        margin-right: 20%;
+        background-color: rgb(26, 26, 26);
+        border-radius: 10px;
+        border: 5px solid white;
+        text-align: left;
+        transition:width 1s,margin-left 0.5s,margin-right 0.5s;
+    }
+    div.list1:hover{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 
-.list1 p{
-    position: relative;
-    width: calc(65% - 50px);
-    text-align: left;
-    color: aqua;
-    font-size: 20px;
-    white-space: nowrap;
-    word-break: keep-all;
-    text-overflow: ellipsis;
-    overflow:hidden;
-    height: 27px;
-    transition: height 0s;
-    padding-left: 10px;
-    margin-bottom: 0%;
-    padding-bottom: 0%;
+    .list1 p{
+        position: relative;
+        width: calc(65% - 50px);
+        text-align: left;
+        color: aqua;
+        font-size: 20px;
+        white-space: nowrap;
+        word-break: keep-all;
+        text-overflow: ellipsis;
+        overflow:hidden;
+        height: 27px;
+        transition: height 0s;
+        padding-left: 10px;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+    }
+
+    div.list1:hover p{
+        text-overflow: clip;
+        word-wrap: break-word;
+        white-space:normal;
+        height: auto;
+    }
 }
+@media (hover: none) {
 
-div.list1:hover p{
-    text-overflow: clip;
-    word-wrap: break-word;
-    white-space:normal;
-    height: auto;
+    div.list1{
+        margin-top: 50px;
+        margin-left: 10%;
+        margin-right: 10%;
+        background-color: rgb(26, 26, 26);
+        border-radius: 10px;
+        border: 5px solid white;
+        text-align: left;
+        transition:width 1s,margin-left 0.5s,margin-right 0.5s;
+    }
+
+    .list1 p{
+        position: relative;
+        width: calc(65% - 50px);
+        text-align: left;
+        color: aqua;
+        font-size: 20px;
+        white-space: nowrap;
+        word-break: keep-all;
+        text-overflow: ellipsis;
+        overflow:hidden;
+        height: auto;
+        transition: height 0s;
+        padding-left: 10px;
+        margin-bottom: 0%;
+        padding-bottom: 0%;
+    }
 }
 
 .list1 p a{

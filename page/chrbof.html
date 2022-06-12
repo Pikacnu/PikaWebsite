@@ -1,0 +1,51 @@
+</html>
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pikacnu's Webside</title>
+    <meta name="author " content="Pikacnu">
+    <link rel="stylesheet" href="../main.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+</head>
+<body onload="list('CHRBOF')">
+    <div id="background">
+        <h1>畚箕開服查詢</h1>
+    </div>
+
+    <iframe src="../list.html" frameborder="0" id="list"></iframe>
+
+    <div style="margin-top: 50px;overflow:visible">
+        <p style="font-size: 0px;">1</p>
+        <div class="list1">
+            <h2 id="test"></h2>
+            <p >
+                一個簡單的小程式來計算畚箕在 42 輪的情況下休假的時間 ， 大標題即為答案
+            </p>
+        </div>
+    </div>
+    <script src="../main.js"></script>
+    <script>
+        let Date1 = new Date('June 9, 2022');
+        let num1 = new Date().getDate();
+        let num2 = new Date().getMonth();
+        let num3 = new Date().getFullYear();
+        let Date2 = new Date(num3, num2, num1);
+
+        let test = function Date(Date1, Date2) { 
+            let milliseconds_Time = Date2.getTime() - Date1.getTime();
+            return milliseconds_Time / (1000 * 3600 * 24);
+        };
+
+        var p = document.getElementById("test");
+        var days = test(Date1, Date2)%6;
+        if(0<days<5){
+            p.innerHTML = "畚箕今天可能不會開服";
+        }else{
+            p.innerHTML = "畚箕今天可能會開服";
+        }
+    </script>
+
+</body>
+</html>
