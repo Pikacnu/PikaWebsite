@@ -57,6 +57,8 @@ iframe#list{
 }
 
 div#list{
+    margin: 0%;
+    padding: 0%;
     position: absolute;
     width: 100%;
     left: -1px;
@@ -173,6 +175,7 @@ ul#list{
         margin-top: 50px;
         margin-left: 10%;
         margin-right: 10%;
+        margin-bottom: 0%;
         background-color: rgb(26, 26, 26);
         border-radius: 10px;
         border: 5px solid white;
@@ -186,12 +189,11 @@ ul#list{
         text-align: left;
         color: aqua;
         font-size: 20px;
-        white-space: pre-wrap;
-        word-break: break-all;
-        text-overflow: ellipsis;
+        white-space: normal;
+        word-break: break-word;
+        text-overflow: clap;
         overflow:hidden;
         height: auto;
-        transition: height 0s;
         padding-left: 10px;
         margin-bottom: 0%;
         padding-bottom: 0%;
