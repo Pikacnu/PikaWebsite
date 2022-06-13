@@ -42,7 +42,10 @@
 
         var p = document.getElementById("test");
         var days = test(Date1, Date2)%6;
-        if(0<days<5){
+
+        console.log(days);
+
+        if(days<5 && 0<days){
             p.innerHTML = "畚箕今天可能不會開服";
         }else{
             p.innerHTML = "畚箕今天可能會開服";
