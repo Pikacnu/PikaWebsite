@@ -72,7 +72,7 @@
             var Protect = parseInt(Protect);
             var Armor = parseInt(Armor);
             var Enchantment = parseInt(Enchantment);
-            if(Enchantment === "" && 0){
+            if(Enchantment === "" || Enchantment === 0){
                 document.getElementById('Ans').innerHTML = "將受到的傷害為 : "+String(Damage*(1-(Math.min(20,Math.max(Protect/5,Protect-Damage/(2+(Armor/4)))))/25));
             }else{
                 Num = Damage*(1-(Math.min(20,Math.max(Protect/5,Protect-Damage/(2+(Armor/4)))))/25);
