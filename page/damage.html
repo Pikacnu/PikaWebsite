@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" name="Number1" id="Damage" value="0" min="0"><label>傷害</label><br>
+        <input type="number" name="Number2" id="Protect" value="0" min="0"><label>防禦點數</label><br>
+        <input type="number" name="Number3" id="Armor" value="0" min="0" max="15"><label>盔甲強度</label><br>
+        <input type="number" name="Number4" id="Enchantment" value="0" min="0" max="20"><label>保護附魔(等級加總 20以上填20)</label><br>
+        <input type="button" value="Answer" id="Answer">
+    </form>
+    <p id="Ans">將受到的傷害為 : 0</p>
+    <script>
+        armor = document.getElementById('Armor');
+        armor.addEventListener('change',function(event){
+            if(armor.value === ""){
+                armor.value = 0;
+            }else if(armor.value < 0)
+            {
+                armor.value = 0;
+            }else if(armor.value > 15)
+            {
+                armor.value = 15;
+            };
+        });
+        
+        protect = document.getElementById('Protect');
+        protect.addEventListener('change',function(event){
+            if(protect.value === ""){
+                protect.value = 0;
+            }else if(protect.value < 0)
+            {
+                protect.value = 0;
+            }
+        });
+        
+        damage = document.getElementById('Damage');
+        damage.addEventListener('change',function(event){
+            if(damage.value === ""){
+                damage.value = 0;
+            }else if(damage.value < 0)
+            {
+                damage.value = 0;
+            }
+        });
+
+        Enchantment = document.getElementById('Enchantment');
+        Enchantment.addEventListener('change',function(event){
+            if(Enchantment.value === ""){
+                Enchantment.value = 0;
+            }else if(Enchantment.value < 0)
+            {
+                Enchantment.value = 0;
+            }else if(Enchantment.value > 20)
+            {
+                Enchantment.value = 20;
+            };
+        });
+
+        hi = document.getElementById('Answer');
+        hi.addEventListener('click', function(event){
+            var Damage = document.getElementById('Damage').value;
+            var Protect = document.getElementById('Protect').value;
+            var Armor = document.getElementById('Armor').value;
+            var Enchantment = document.getElementById('Enchantment').value;
+            var Damage = parseInt(Damage);
+            var Protect = parseInt(Protect);
+            var Armor = parseInt(Armor);
+            var Enchantment = parseInt(Enchantment);
+            if(Enchantment === "" && 0){
+                document.getElementById('Ans').innerHTML = "將受到的傷害為 : "+String(Damage*(1-(Math.min(20,Math.max(Protect/5,Protect-Damage/(2+(Armor/4)))))/25));
+            }else{
+                Num = Damage*(1-(Math.min(20,Math.max(Protect/5,Protect-Damage/(2+(Armor/4)))))/25);
+                Num = Num-Num*Enchantment/25;
+                document.getElementById('Ans').innerHTML = "將受到的傷害為 : "+String(Num);
+            }
+        });
+    </script>
+    <style>
+        body{
+            background-color: #2568a7;
+        }
+        *{
+            text-align: center;
+        }
+        input,label{
+            display: inline-block;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+        }
+        label{
+            color: chartreuse;
+        }
+        input{
+            background-color: rgba(253, 173, 0, 0.945);
+            transform: translateX(-20px);
+        }
+        #Answer{
+            width: 100px;
+            border-radius: 50px;
+            background-color: aquamarine;
+        }
+        p{
+            font-size: 50px;
+        }
+    </style>
+</body>
+</html>
