@@ -27,7 +27,7 @@
             </p>
             <div style="align-items: center;justify-content: center;">
                 <p>輸入日期</p>
-                <input type="date" id="Input" value="2022-06-09" style="justify-self: center;">
+                <input type="date" id="Input" style="justify-self: center;">
             </div>
             <a target="_blank" href="https://discord.gg/sw99u8W">
                 <img src="../discord.png" alt="CFRBOF's Discord" title="CFRBOF's Discord">
@@ -36,9 +36,11 @@
     </div>
     <script src="../main.js"></script>
     <script>
+        document.getElementById("Input").valueAsDate = new Date()
         function getinputdate(){
             return document.getElementById("Input").valueAsDate;
         }
+        var Date1 = new Date('2022-06-09');
         let num1 = new Date().getDate();
         let num2 = new Date().getMonth();
         let num3 = new Date().getFullYear();
@@ -51,7 +53,7 @@
         };
 
         function show(){
-            var Date1 = getinputdate()
+            var Date2 = getinputdate()
             var days = calcDate(Date1, Date2)%6;
             if(days<5 && 0<days){
                 p.innerHTML = "畚箕今天可能不會開服";
