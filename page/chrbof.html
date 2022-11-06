@@ -22,9 +22,13 @@
         <p style="font-size: 0px;">1</p>
         <div class="list1">
             <h2 id="test"></h2>
-            <p >
+            <p>
                 一個簡單的小程式來計算畚箕在 42 輪的情況下休假的時間 ， 大標題即為答案
             </p>
+            <div style="align-items: center;justify-content: center;">
+                <p>輸入日期</p>
+                <input type="date" id="Input" value="2022-06-09" style="justify-self: center;">
+            </div>
             <a target="_blank" href="https://discord.gg/sw99u8W">
                 <img src="../discord.png" alt="CFRBOF's Discord" title="CFRBOF's Discord">
             </a>
@@ -32,27 +36,33 @@
     </div>
     <script src="../main.js"></script>
     <script>
-        let Date1 = new Date('June 9, 2022');
+        function getinputdate(){
+            return document.getElementById("Input").valueAsDate;
+        }
         let num1 = new Date().getDate();
         let num2 = new Date().getMonth();
         let num3 = new Date().getFullYear();
         let Date2 = new Date(num3, num2, num1);
+        var p = document.getElementById("test");
 
-        let test = function Date(Date1, Date2) { 
+        function calcDate(Date1, Date2) { 
             let milliseconds_Time = Date2.getTime() - Date1.getTime();
             return milliseconds_Time / (1000 * 3600 * 24);
         };
 
-        var p = document.getElementById("test");
-        var days = test(Date1, Date2)%6;
-
-        console.log(days);
-
-        if(days<5 && 0<days){
-            p.innerHTML = "畚箕今天可能不會開服";
-        }else{
-            p.innerHTML = "畚箕今天可能會開服";
+        function show(){
+            var Date1 = getinputdate()
+            var days = calcDate(Date1, Date2)%6;
+            if(days<5 && 0<days){
+                p.innerHTML = "畚箕今天可能不會開服";
+            }else{
+                p.innerHTML = "畚箕今天可能會開服";
+            }
+            console.log('change')
         }
+
+        document.getElementById("Input").addEventListener('change',()=>{show()})
+        show()
     </script>
 
 </body>
