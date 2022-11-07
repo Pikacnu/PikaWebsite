@@ -55,10 +55,15 @@
         function show(){
             var Date2 = getinputdate()
             var days = calcDate(Date1, Date2)%6;
+
+            var test = new Date(document.getElementById("Input").valueAsDate)
+
+            console.log(test)
+
             if(days<5 && 0<days){
-                p.innerHTML = "畚箕今天可能不會開服";
+                p.innerHTML = "畚箕在"+test.getFullYear()+'/'+(test.getMonth()+1)+'/'+test.getDate()+"可能不會開服";
             }else{
-                p.innerHTML = "畚箕今天可能會開服";
+                p.innerHTML = "畚箕在"+test.getFullYear()+'/'+(test.getMonth()+1)+'/'+test.getDate()+"可能會開服";
             }
             console.log('change')
         }
